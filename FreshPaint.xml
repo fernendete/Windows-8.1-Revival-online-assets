@@ -1,1 +1,59 @@
-<app name='Freshpaint' color='#fafafa'><screen name='_main_'><h1 class='app-header'>LET'S PAINT</h1></screen></app>
+<app name="Freshpaint" color="#fafafa">
+  <manifest>
+    <Icon Source="https://raw.githubusercontent.com/tuUsuario/metro-store/main/apps/freshpaint-icon.png"/>
+    <Stylesheet inline="true"><![CDATA[
+      .paint-zone {
+        width: 100%;
+        height: 400px;
+        border: 2px dashed #ccc;
+        background: #fff;
+      }
+
+      .tools {
+        display: flex;
+        justify-content: space-around;
+        padding: 12px;
+      }
+
+      .tool {
+        background: #eee;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    ]]></Stylesheet>
+    <Script inline="true"><![CDATA[
+      const app = document.querySelector('#apps-box #Freshpaint');
+      const zone = app.querySelector('#paint-zone');
+      const colors = ['#ff4b4b', '#4bdcff', '#a2ff4b'];
+      let index = 0;
+
+      zone.onclick = () => {
+        zone.style.background = colors[index];
+        index = (index + 1) % colors.length;
+      };
+    ]]></Script>
+  </manifest>
+
+  <liveTiles>
+    <state onlyInSize="wide">
+      <div style="padding:10px;font-size:14px;">🎨 Freshpaint listo para crear</div>
+    </state>
+  </liveTiles>
+
+  <screen name="_main_">
+    <div style="padding-top:150px;">
+      <h1 class="app-header" style="color:#333;font-size:26px;margin-bottom:20px;">LET'S PAINT</h1>
+      <div id="paint-zone" class="paint-zone"></div>
+      <div class="tools">
+        <div class="tool">Pincel</div>
+        <div class="tool">Color</div>
+        <div class="tool">Guardar</div>
+      </div>
+    </div>
+    <AppBar edge="bottom" visible="true" style="background:#f1f1f1;color:#333;border-top:1px solid #ccc;">
+      <Button label="🖌️ Cambiar color" onclick="document.querySelector('#paint-zone').click()"/>
+    </AppBar>
+  </screen>
+</app>
