@@ -1,0 +1,101 @@
+<app name="Vevo" color="#fafafa">
+  <manifest>
+    <Icon Source="https://img.icons8.com/color/480/vevo.png"/>
+    <Stylesheet inline="true"><![CDATA[
+      .genre {
+        padding:15px;
+        background:#e60000;
+        color:#fff;
+        margin-bottom:10px;
+        border-radius:6px;
+        cursor:pointer;
+      }
+      .video {
+        margin-top:10px;
+        padding:10px;
+        background:#f0f0f0;
+        border-radius:6px;
+        cursor:pointer;
+        color:#222;
+      }
+    ]]></Stylesheet>
+    <Script inline="true"><![CDATA[
+      const app = document.querySelector('#apps-box #Vevo');
+      const viewer = app.querySelector('#video-viewer');
+      const genres = app.querySelectorAll('.genre');
+      const feed = app.querySelector('#feed');
+
+      genres.forEach(genre => {
+        genre.addEventListener('click', () => {
+          const g = genre.getAttribute('data-name');
+          Me.Frame.Navigate('feed');
+          feed.innerHTML = `
+            <div style='font-size:18px;'>🎧 Género: <b>${g}</b></div>
+            <div class='video' data-title='Metro Pulse' data-artist='Fernando Dev' data-duration='3:42'>▶️ Metro Pulse — Fernando Dev</div>
+            <div class='video' data-title='Manifesto Beats' data-artist='CodeNarrator' data-duration='4:10'>▶️ Manifesto Beats — CodeNarrator</div>
+          `;
+
+          feed.querySelectorAll('.video').forEach(v => {
+            v.addEventListener('click', () => {
+              const t = v.getAttribute('data-title');
+              const a = v.getAttribute('data-artist');
+              const d = v.getAttribute('data-duration');
+              Me.Frame.Navigate('player');
+              viewer.innerHTML = `
+                <div style='font-size:18px;'>🎬 ${t}</div>
+                <div style='color:#999;'>Artista: ${a} — Duración: ${d}</div>
+                <div style='margin-top:20px;'>🔊 Reproducción simulada en HD...</div>
+              `;
+            });
+          });
+        });
+      });
+    ]]></Script>
+  </manifest>
+
+  <liveTiles>
+    <state appIcon="true" onlyInSize="wide">
+      <div style="padding:10px;color:#222;">🎧 Estreno: “Metro Pulse” por Fernando Dev</div>
+    </state>
+    <state appIcon="true" onlyInSize="large">
+      <div style="padding:10px;color:#111;">📺 Vevo TV: canal musical 24/7</div>
+    </state>
+  </liveTiles>
+
+  <screen name="_main_">
+    <div style="padding-top:150px;">
+      <div class="app-header" style="color:#111;font-size:24px;margin-bottom:20px;">
+        🎶 Vevo
+      </div>
+      <div>
+        <div class="genre" data-name="Pop">🎧 Pop</div>
+        <div class="genre" data-name="Rock">🎸 Rock</div>
+        <div class="genre" data-name="R&B">🎤 R&B</div>
+      </div>
+    </div>
+  </screen>
+
+  <screen name="feed">
+    <div style="padding-top:150px;">
+      <div class="app-header" style="color:#111;font-size:22px;margin-bottom:12px;">
+        📄 Feed Musical
+      </div>
+      <div id="feed" style="color:#333;">Cargando feed...</div>
+    </div>
+    <AppBar edge="bottom" visible="true">
+      <Button label="🔙 Volver" onclick="Me.Frame.Navigate('_main_')"/>
+    </AppBar>
+  </screen>
+
+  <screen name="player">
+    <div style="padding-top:150px;">
+      <div class="app-header" style="color:#111;font-size:22px;margin-bottom:12px;">
+        📺 Reproductor
+      </div>
+      <div id="video-viewer" style="font-size:16px;color:#333;">Cargando video...</div>
+    </div>
+    <AppBar edge="bottom" visible="true">
+      <Button label="🔙 Volver al feed" onclick="Me.Frame.Navigate('feed')"/>
+    </AppBar>
+  </screen>
+</app>
