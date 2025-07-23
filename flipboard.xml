@@ -1,1 +1,32 @@
-<app name='flipboard' color='#ffffff'><screen name='_main_'><h1 class='app-header'>Flipboard Daily</h1><p>Swipe right for news, left for tech, and up for inspiration.</p></screen></app>
+<app name="Flipboard" color="#ffffff">
+  <manifest>
+    <Icon Source="https://raw.githubusercontent.com/fernendete/Windows-8.1-Revival-Store-apps/main/icons/flipboard.png"/>
+    <Stylesheet inline="true"><![CDATA[
+      .flip-message {
+        font-size: 16px;
+        color: #444;
+        padding: 12px;
+      }
+    ]]></Stylesheet>
+    <Script inline="true"><![CDATA[
+      // Podés agregar lógica de swipes si el runtime lo permite
+    ]]></Script>
+  </manifest>
+
+  <screen name="_main_">
+    <div style="padding-top:150px;">
+      <h1 class="app-header" style="color:#222;font-size:24px;margin-bottom:10px;">
+        Flipboard Daily
+      </h1>
+      <p class="flip-message">
+        Swipe right for news, left for tech, and up for inspiration.
+      </p>
+    </div>
+
+    <AppBar edge="bottom" visible="true" style="background:#f9f9f9;color:#333;">
+      <Button label="📰 Noticias" />
+      <Button label="💻 Tech" />
+      <Button label="✨ Inspiración" />
+    </AppBar>
+  </screen>
+</app>
