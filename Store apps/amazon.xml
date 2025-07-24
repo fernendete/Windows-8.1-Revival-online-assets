@@ -1,1 +1,378 @@
-<app name='amazon' color='#fafafa'><screen name='_main_'><img src='https://th.bing.com/th/id/R.c00e3a9e1f40226eaed409ee1e45b8eb?rik=f1GLlasFjUCu%2fQ&amp;riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2016%2f10%2fAmazon-Logo.png&amp;ehk=gLJu7Bd3zSqjAJ7OwoyQkQPaz6ofAdahYh91trMVyN0%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0'/><h1 style='position:absolute;left:20px;top:100px'>Products</h1></screen></app>
+<app name="store" color="#009B00">
+        <manifest>
+            <Icon Source="assets/tiles/store.png"/>
+            <Script Source="js/metro/store.js"/>
+            <Stylesheet Source="css/metro/store.css"/>
+            <Extensions>
+                <Extension name="search" start="search"/>
+            </Extensions>
+        </manifest>
+        <liveTiles>
+            <state appIcon="true" onlyInSize="large">
+            <div style="position:absolute;left:12.5px">
+                <h1>Essential Apps</h1>
+                <div stlye="translate:2.5px -2.5px">
+                    <div style="display:flex;flex-wrap:nowrapl;margin:0;height:57.5px">
+                        <div style="width:40px;height:40px;background-image:url('https://logodix.com/logo/1727936.jpg');background-size:contain"/>
+                        <div style="display:grid">
+                            <p style="margin:0;translate:2.5px 5px">Hola.com</p>
+                            <div style="display:flex;translate:2px -3.25px">
+                                <p style="margin:1.5px">Free</p>
+                                <p style="margin:1.5px">★★★★☆</p>
+                                <p style="margin:1.5px">48</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-wrap:nowrap;margin:0;height:57.5px">
+                        <div style="width:40px;height:40px;background-image:url('https://tse1.mm.bing.net/th/id/OIP.NqK4KzgQXGJOAwG5Bj6EAgAAAA?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3');background-size:contain"/>
+                        <div style="display:grid">
+                            <p style="margin:0;translate:2.5px 5px">Wikipedia</p>
+                            <div style="display:flex;translate:2px -3.25px">
+                                <p style="margin:1.5px">Free</p>
+                                <p style="margin:1.5px">★★★★☆</p>
+                                <p style="margin:1.5px">173</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-wrap:nowrap;margin:0;height:57.5px">
+                        <div style="width:40px;height:40px;background-image:url('https://tse3.mm.bing.net/th/id/OIP.5p-yi8LjPT3zjs0jWptSSAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3');background-size:contain"/>
+                        <div style="display:grid">
+                            <p style="margin:0;translate:2.5px 5px">eBay</p>
+                            <div style="display:flex;translate:2px -3.25px">
+                                <p style="margin:1.5px">Free</p>
+                                <p style="margin:1.5px">★★★★☆</p>
+                                <p style="margin:1.5px">209</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </state>
+            <state appIcon="true" onlyInSize="large">
+                <div style="position:absolute;left:10px;top:10px">
+                    <div style="width: 110px;height:110px;background-image:url('https://www.innovativerepairgroup.com/files/callouts/team/facebook_icon_2013svg.png');background-size:cover"/>
+                    <h1>New in the store</h1>
+                    <p>Facebook</p>
+                    <div style="display:inline-flex">
+                        <p style="margin:1.5px">Free</p>
+                        <p style="margin:1.5px">★★★★★</p>
+                        <p style="margin:1.5px">14</p>
+                    </div>
+                </div>
+            </state>
+        </liveTiles>
+        <overlay>
+            <div style="position:absolute;left:0;top:0;width:100%;height:50px;background:#018B00;z-index:-1"/>
+            <div id="top" style="position:absolute;left:15px;top:5px;display:flex;color:#fff;align-items:center">
+                <div id="icon" style="width:45px;height:45px;background-size:contain;background-image:url('assets/tiles/store.png')"/>
+                <goto to="_main_" skin="span" style="margin-left:7.5px">Home</goto>
+                <div id="gotos" style="translate:100px;display:flex">
+                    <span style="text-wrap:nowrap;margin:0 25px">Top charts</span>
+                    <span style="text-wrap:nowrap;margin:0 25px">Categories</span>
+                    <span style="text-wrap:nowrap;margin:0 25px">Collections</span>
+                    <span style="text-wrap:nowrap;margin:0 25px">Account</span>
+                </div>
+            </div>
+                <div id="search">
+                    <input type="text" id="search-input" placeholder="Search for apps"></input>
+                    <div id="lens"></div>
+                </div>
+            <div id="loading-top-store">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <p class="app-colored" id="live-installs-status">Installing Freshpaint...</p>
+        </overlay>
+        <screen name="installs">
+            <h1 class="app-header">Installs</h1>
+            <div id="installs-cont"></div>
+        </screen>
+        <screen name="_main_">
+            <h1 class="app-header">Store</h1>
+            <goto id="updates-txt" skin="span" to="updates">updates avialable</goto>
+            <div id="scroll">
+                <div id="spotlight">
+                    <div id="banner"></div>
+                    <div id="icon"></div>
+                    <div id="info">
+                        <div id="name">App Name</div>
+                        <div id="desc">pussy</div>
+                        <div id="info2">
+                            <div id="price">Freee</div>
+                            <div id="stars">★★★★☆</div>
+                            <div id="reviews">5,345</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collections">
+                    <div style="display:flex;align-items:flex-end">
+                        <h2 style="margin:0 ">Collections</h2>
+                        <span class="app-colored" style="margin-left:7.5px">See all</span>
+                    </div>
+                    <div id="cnt">
+                        <div id="music">
+                            <div class="collection-collage"></div>
+                            <p>Music</p>
+                        </div>
+                        <div id="action-arcade">
+                            <div class="collection-collage"></div>
+                            <p>Action &amp; Arcade games</p>
+                        </div>
+                        <div id="racing">
+                            <div class="collection-collage"></div>
+                            <p>Racing games</p>
+                        </div>
+                        <div id="classroom">
+                            <div class="collection-collage"></div>
+                            <p>Organize your classroom</p>
+                        </div>
+                        <div id="hidden-obj">
+                            <div class="collection-collage"></div>
+                            <p>Hidden object games</p>
+                        </div>
+                        <div id="gameloft-games">
+                            <div class="collection-collage"></div>
+                            <p>Gameloft gams</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="hori-scroll">
+                    <div id="featured">
+                        <div style="display:flex;align-items:flex-end">
+                            <h2 style="margin:0">Featured</h2>
+                            <div class="app-colored" style="margin-left:7.5px">See all</div>
+                        </div>
+                        <div id="featured-apps"></div>
+                    </div>
+                </div>
+            </div>
+        </screen>
+        <screen name="updates">
+            <h1 class="app-header">Updates</h1>
+        </screen>
+        <screen name="write-a-review">
+            <h1 class="app-header">Write a review</h1>
+            <div id="h">App name</div>
+            <div id="cnt">
+                <div id="writing-stars" stars="0">
+                    <div>★</div>
+                    <div>★</div>
+                    <div>★</div>
+                    <div>★</div>
+                    <div>★</div>
+                </div>
+                <h2>Review Title</h2>
+                <textarea id="review-title-input" type="text"></textarea>
+                <h2>Review Description</h2>
+                <textarea id="review-desc-input" type="text"></textarea>
+                <div id="btn">
+                    <button id="submit-review">Submit review</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </div>
+        </screen>
+        <screen name="app">
+            <h1 id="title" class="app-header">App name</h1>
+            <div id="container" style="display:flex">
+                <div style="width:200px"/>
+                <div id="app-box">
+                    <button id="install-bt">Install</button>
+                    <div style="display:inline-flex;position:relative;margin-top:30px" id="app-box-price"> 
+                        <h1 id="app-price">Free</h1>
+                        <div id="rating" style="display:flex;">
+                            <div id="stars">★★★★★</div>
+                            <div id="reviews-quantity" style="margin-left:2.5px"/>
+                        </div>
+                    </div>
+                    <div style="margin:40px 0">
+                        <p style="margin:0">When you install an app, you agree to the <span class="app-colored">Terms of Use</span></p>
+                        <p style="margin:0">and any <span class="app-colored">additional terms</span>.</p>
+                    </div>
+                    <div id="content-rating-cont" style="display:flex;align-items:flex-start">
+                        <div id="content-rating-img"/>
+                        <span style="display:flex;margin-left:17.5px">Content Rating: <div class="app-colored" style="margin-left:2.5px">Everyone</div></span>
+                    </div>
+                    <div id="recomended">
+                        <div id="related">
+                            <p class="app-colored">Related apps</p>
+                            <div id="related-cont">
+                                <div class="list-app">
+                                    <div class="icn"></div>
+                                    <div class="r">
+                                        <div class="n">App Name</div>
+                                        <div class="i2">
+                                            <div class="p">Free</div>
+                                            <div class="s">
+                                              <div class="star">★</div>
+                                              <div class="star">★</div>
+                                              <div class="star">★</div>
+                                              <div class="star not-filled">★</div>
+                                              <div class="star not-filled">★</div>
+                                            </div>
+                                            <div class="q">1,0009</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr></hr>
+                        <div>                        
+                            <div id="rate-the-app">
+                                <p>Rate this app</p>
+                                <div id="stars-rate">
+                                    <div class="star">★</div>
+                                    <div class="star">★</div>
+                                    <div class="star">★</div>
+                                    <div class="star">★</div>
+                                    <div class="star">★</div>
+                                </div>
+                                <p style="opacity:.5;">Choose a star rating.</p>
+                            </div>
+                            <div>
+                                <h2 class="app-colored" style="margin-bottom:0">Write a review</h2>
+                                <p style="opacity:.5;margin:0;margin-bottom:7.5px">Share you opinion about this app.</p>
+                            </div>
+                        </div>
+                        <hr></hr>
+                    </div>
+                    <div style="margin-top:30px" id='app-description'>                        
+                        <p>Description</p>
+                        <p style="opacity:.5;text-wrap:wrap" id="cont">no description</p>
+                    </div>
+                </div>
+                <div id="screenshots">
+                    <div id="thumbails">
+                        <div class="screenshot-thumb"/>
+                    </div>
+                    <div id="viewer-and-info">
+                        <div id="viewer">
+                            <div id="img"></div>
+                            <div id="bottom">
+                                <div id="note"> </div>
+                                <div id="fullscreen-btn"></div>
+                            </div>
+                        </div>
+                        <div id="app-info">
+                            <div id="published-by">Published by <span class="app-colored" id="provider">App author</span></div>
+                            <div id="category">Category <span class="app-colored" id="app-category">Undefined</span></div>
+                            <div id="license">Pussy Inc. (c), 2019</div>
+                            <div id="aproximate-size">Aproximate size: 4.04mb</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="rating-and-reviews">
+                    <div style="display:flex;align-items:flex-end">
+                        <h1 style="margin:0">Ratings and reviews</h1>
+                        <goto to="ratings" skin="span" class="app-colored" style="margin-left:10px;translate:0 -2.5px">See all</goto>
+                    </div>
+                    <div id="average-cont">
+                        <div id="average-rating-cont" style="display:flex;align-items:flex-end">
+                            <h1 id="number-aprox" style="font-size:75px;margin:0">0</h1>
+                            <span style="translate:7.5px -14px">Average rating</span>
+                        </div>
+                        <div class="hr"/>
+                        <div id="stars">
+                            <span style="font-size:50px">★★★★★</span>
+                        </div>
+                        <div style="margin-top:20px">
+                            <span id="total-ratings" style="font-size:40px">0</span>
+                            <span style="opacity:.5">ratings</span>
+                        </div>
+                        <div class="hr"/>
+                        <div id="ranks">
+                            <div class="ranking" id="stars-5-rank">
+                                <span>5 stars</span>
+                                <div id="percentage">
+                                    <div id="completed"/>
+                                </div>
+                                <span id="stars-5-ratings">0</span>
+                            </div>
+                            <div class="ranking" id="stars-4-rank">
+                                <span>4 stars</span>
+                                <div id="percentage">
+                                    <div id="completed"/>
+                                </div>
+                                <span id="stars-4-ratings">0</span>
+                            </div>
+                            <div class="ranking" id="stars-3-rank">
+                                <span>3 stars</span>
+                                <div id="percentage">
+                                    <div id="completed"/>
+                                </div>
+                                <span id="stars-3-ratings">0</span>
+                            </div>
+                            <div class="ranking" id="stars-2-rank">
+                                <span>2 stars</span>
+                                <div id="percentage">
+                                    <div id="completed"/>
+                                </div>
+                                <span id="stars-2-ratings">0</span>
+                            </div>
+                            <div class="ranking" id="stars-1-rank">
+                                <span>1 star </span>
+                                <div id="percentage">
+                                    <div id="completed"/>
+                                </div>
+                                <span id="stars-1-ratings">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="details" style="margin-left:100px">
+                    <div>
+                        <h1>Details</h1>
+                        <div id="icon"/>
+                    </div>
+                    <div style="width:250px;margin-left:20px;translate: 0 75px">
+                        <p>This app has permission to use:</p>
+                        <ul id="permissions-list"/>
+                    </div>
+                </div>
+            </div>
+            <div id="error-page">
+            </div>
+        </screen>
+        <screen name="search">
+            <div class="app-header" id="searhc-results-text">Results for ""</div>
+            <div id="apps-found-cont">
+                <div class="app"></div>
+            </div>
+        </screen>
+        <screen name="ratings">
+            <h1 class="app-header" style="transition-delay:.4s">Ratings and reviews</h1>
+            <div id="context-top-menu">
+                <div id="name">
+                    <div id="app-icn"/>
+                    <span id="app-name"/>
+                </div>
+                <div id="dropdowns">                
+                    <div class="dropdown" selected="Most helpful">
+                        <div class="picked" val="Most helpful">Most helpful</div>
+                        <div val="Most recent">Most recent</div>
+                        <div val="Most old">Most old</div>
+                    </div>
+                    <div class="dropdown" selected="Newest">
+                        <div class="picked" val="Newest">Newest</div>
+                        <div val="oldest">oldest</div>
+                    </div>
+                    <div class="dropdown" selected="All reviews">
+                        <div class="picked" val="All reviews">All reviews</div>
+                        <div val="5 stars">5 stars</div>
+                        <div val="4 stars">4 stars</div>
+                        <div val="3 stars">3 stars</div>
+                        <div val="2 stars">2 stars</div>
+                        <div val="1 stars">1 stars</div>
+                    </div>
+                </div>
+            </div>
+            <div id="ratings-cont">            
+                <div id="filters">
+                </div>
+                <div id="avergage-rating-screen"/>
+                <div id="reviews-container"/>
+            </div>
+        </screen>
+    </app>
