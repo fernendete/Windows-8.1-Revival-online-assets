@@ -1,79 +1,7 @@
 <app name="amazon" color="#232f3e">
   <manifest>
     <Icon Source="assets/tiles/amazon.png"/>
-
-    <Script inline="true">
-      <![CDATA[
-        function searchAmazon(query) {
-          document.getElementById("results-header").innerText = `"${query}" search results`;
-          document.getElementById("results-container").innerHTML =
-            `<p>🔍 Searching Amazon for "${query}"...</p>`;
-        }
-
-        function loadFeaturedProducts() {
-          const featured = document.getElementById("featured-products");
-          featured.innerHTML = `
-            <div>📦 Echo Dot</div>
-            <div>📦 Fire TV Stick</div>
-            <div>📦 Ritual Candles</div>
-            <div>📦 Samsung phone</div>
-          `;
-        }
-
-        function addToCart() {
-          alert("🛒 Producto añadido al carrito!");
-        }
-
-        function checkout() {
-          alert("🧾 Pedido ritualizado. ¡Gracias por usar Amazon Baldosa!");
-        }
-      ]]>
-    </Script>
-
-    <Stylesheet inline="true">
-      <![CDATA[
-        .serious-header {
-          font-size: 20px;
-          font-weight: bold;
-          padding: 10px;
-          background-color: #febd69;
-          color: #232f3e;
-        }
-
-        .category-bt {
-          background: #ff9900;
-          margin: 5px;
-          padding: 10px;
-          border-radius: 4px;
-          color: white;
-          cursor: pointer;
-        }
-
-        #search input {
-          padding: 8px;
-          width: 80%;
-          border: none;
-          border-radius: 4px;
-          margin: 10px;
-        }
-
-        #scroll {
-          max-height: 500px;
-          overflow-y: auto;
-        }
-
-        button {
-          background-color: #febd69;
-          border: none;
-          padding: 10px;
-          margin: 10px;
-          border-radius: 4px;
-          font-weight: bold;
-        }
-      ]]>
-    </Stylesheet>
   </manifest>
-
   <overlay>
     <div id="search">
       <input type="text" id="search-input" placeholder="Buscar en Amazon" onkeypress="if(event.key==='Enter') searchAmazon(this.value)">
@@ -81,7 +9,6 @@
     </div>
     <div class="loader" id="loading"></div>
   </overlay>
-
   <screen name="_main_">
     <div class="serious-header">Amazon Portal</div>
     <div id="scroll">
