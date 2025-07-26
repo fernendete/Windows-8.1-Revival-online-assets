@@ -23,7 +23,7 @@
             ],
             "dc": "shop everyhting you love in amazon!",
             "xml": "amazon.xml",
-            "r": []
+            "r": [{ s: 3, t: "placeholder", d: "5-5-5-2005", c: "placeholder description" }]
         },
         "el-pais": {
             "c": "unkown",
@@ -37,7 +37,7 @@
                 "icon": "https://play-lh.googleusercontent.com/NYeRvpSxP2NLcfjwikdU6IxOC-FnPdgRbYcgEEiTFxrZcbXAKaBahhwmD-BIGDAxm9s"
             },
             "xml": "el-pais.xml",
-            "r": []
+            "r": [{ s: 3, t: "placeholder", d: "5-5-5-2005", c: "placeholder description" }]
         },
         "Freshpaint": {
             "c": "Klyde frego",
@@ -64,7 +64,7 @@
                 }
             ],
             "xml": "FreshPaint.xml",
-            "r": []
+            "r": [{ s: 3, t: "placeholder", d: "5-5-5-2005", c: "placeholder description" }]
         }
     }
 }
