@@ -17,7 +17,7 @@
         <div class="category-bt" onclick="searchAmazon('Electronics')">Electronics</div>
         <div class="category-bt" onclick="searchAmazon('Books')">Books</div>
         <div class="category-bt" onclick="searchAmazon('Fashion')">Fashion</div>
-        <div class="category-bt" onclick="searchAmazon('Toys')">Toys & Games</div>
+        <div class="category-bt" onclick="searchAmazon('Toys')">Toys &amp; Games</div>
       </div>
     </div>
   </screen>
