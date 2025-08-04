@@ -70,7 +70,7 @@
       <div>
         <div class="genre" data-name="Pop">🎧 Pop</div>
         <div class="genre" data-name="Rock">🎸 Rock</div>
-        <div class="genre" data-name="R&B">🎤 R&B</div>
+        <div class="genre" data-name="R&amp;B">🎤 R&amp;B</div>
       </div>
     </div>
   </screen>
