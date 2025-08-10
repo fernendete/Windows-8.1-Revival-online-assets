@@ -1,8 +1,15 @@
 [
-    {
-        "user":"manolo",
-        "subject": "suggestion",
-        "text": "",
-        "date": "09-23-2025"
-    }
+  {
+    "user": "manolo",
+    "subject": "suggestion",
+    "text": "",
+    "date": "09-23-2025"
+  },
+  {
+    "id": 1754857223329,
+    "title": "Nuevo feedback",
+    "message": "",
+    "timestamp": "2025-08-10T20:20:23.329Z",
+    "author": "Anónimo ritual"
+  }
 ]
