@@ -11,5 +11,35 @@
     "message": "",
     "timestamp": "2025-08-10T20:20:23.329Z",
     "author": "Anónimo ritual"
+  },
+  {
+    "user": "Fernando",
+    "subject": "Suggestion",
+    "text": {
+      "0": {
+        "jQuery3710443432056865477151": {
+          "events": {
+            "mousedown": [
+              {
+                "type": "mousedown",
+                "origType": "mousedown",
+                "guid": 50,
+                "namespace": ""
+              }
+            ],
+            "click": [
+              {
+                "type": "click",
+                "origType": "click",
+                "guid": 119,
+                "namespace": ""
+              }
+            ]
+          }
+        }
+      },
+      "length": 1
+    },
+    "date": "10-7-2025 12:28PM"
   }
 ]
