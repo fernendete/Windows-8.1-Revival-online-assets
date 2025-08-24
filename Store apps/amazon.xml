@@ -20,11 +20,8 @@
     ]]></Script>
 
     <Stylesheet><![CDATA[
-      body {
-        margin: 0;
-        font-family: "Segoe UI", sans-serif;
+      .screen {
         background-color: #232f3e;
-        color: white;
       }
 
       .serious-header {
