@@ -116,7 +116,7 @@
   </screen>
 
   <screen name="cart">
-    <div class="serious-header">Tu Carrito</div>
+    <div class="serious-header">Your cart</div>
     <div id="cart-items-container"></div>
     <button onclick="checkout()">Finalizar compra</button>
   </screen>
