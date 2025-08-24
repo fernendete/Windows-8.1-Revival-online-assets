@@ -6,7 +6,7 @@
     <Script><![CDATA[
       function searchAmazon(query) {
         const results = document.getElementById("search-results");
-        results.innerHTML = `<p>Buscando "${query}"...</p>`;
+        results.innerHTML = `<p>Results for "${query}"...</p>`;
         Me.Frame.Navigate("search")
       }
 
@@ -88,7 +88,7 @@
   </overlay>
 
   <screen name="_main_">
-    <div class="serious-header">Amazon Portal</div>
+    <div class="app-header">Amazon Portal</div>
     <div id="scroll">
       <div id="featured-products"></div>
       <div id="categories">
