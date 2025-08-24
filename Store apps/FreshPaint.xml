@@ -1,6 +1,6 @@
 <app name="Freshpaint" color="#fafafa">
   <manifest>
-    <Icon Source="https://raw.githubusercontent.com/tuUsuario/metro-store/main/apps/freshpaint-icon.png"/>
+    <Icon Source="https://www.chip.de/ii/1/8/7/2/6/5/2/5/fresh_paint_icon-45c09013746272ba.png"/>
     <Stylesheet inline="true"><![CDATA[
       .paint-zone {
         width: 100%;
