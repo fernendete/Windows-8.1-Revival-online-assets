@@ -11,17 +11,18 @@
       }
 
       function addToCart() {
-        alert("Producto añadido al carrito 🛒");
+        notify("amazon", "Product added to the cart!")
       }
 
       function checkout() {
-        alert("Gracias por tu compra 💳");
+        alert("Thanks for shopping at amazon!");
       }
     ]]></Script>
 
     <Stylesheet><![CDATA[
       .screen {
         background-color: #232f3e;
+        color: #000
       }
 
       .serious-header {
