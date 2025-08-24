@@ -1,7 +1,7 @@
 <app name="Freshpaint" color="#fafafa">
   <manifest>
     <Icon Source="https://www.chip.de/ii/1/8/7/2/6/5/2/5/fresh_paint_icon-45c09013746272ba.png"/>
-    <Stylesheet inline="true"><![CDATA[
+    <Stylesheet><![CDATA[
       .paint-zone {
         width: 100%;
         height: 400px;
@@ -23,7 +23,7 @@
         font-size: 14px;
       }
     ]]></Stylesheet>
-    <Script inline="true"><![CDATA[
+    <Script><![CDATA[
       const app = document.querySelector('#apps-box #Freshpaint');
       const zone = app.querySelector('#paint-zone');
       const colors = ['#ff4b4b', '#4bdcff', '#a2ff4b'];
