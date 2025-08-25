@@ -41,14 +41,8 @@
     ]]></Stylesheet>
     <Script><![CDATA[
       const app = document.querySelector('#apps-box #Freshpaint');
-      const zone = app.querySelector('#paint-zone');
       const colors = ['#ff4b4b', '#4bdcff', '#a2ff4b'];
       let index = 0;
-
-      zone.onclick = () => {
-        index = (index + 1) % colors.length;
-        ctx.fillStyle = colors[index];
-      };
 
       const canvas = document.querySelector("#oooh");
       const ctx = canvas.getContext("2d");
