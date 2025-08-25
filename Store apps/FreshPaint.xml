@@ -22,6 +22,12 @@
         cursor: pointer;
         font-size: 14px;
       }
+
+      #oooh {
+        width: 100vw;
+        height: 100vh;
+        touch-action: none;
+      }
     ]]></Stylesheet>
     <Script><![CDATA[
       const app = document.querySelector('#apps-box #Freshpaint');
@@ -33,6 +39,21 @@
         zone.style.background = colors[index];
         index = (index + 1) % colors.length;
       };
+
+      const canvas = document.querySelector("#oooh");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "black";
+
+      canvas.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        for (let touch of e.touches) {
+          const x = touch.clientX;
+          const y = touch.clientY;
+          ctx.beginPath();
+          ctx.arc(x, y, 12, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
     ]]></Script>
   </manifest>
 
@@ -43,6 +64,7 @@
   </liveTiles>
 
   <screen name="_main_">
+    <canvas id="oooh" width="500" height="500"></canvas>
     <div style="padding-top:150px;">
       <h1 class="app-header" style="color:#333;font-size:26px;margin-bottom:20px;">LET'S PAINT</h1>
       <div id="paint-zone" class="paint-zone"></div>
@@ -52,8 +74,17 @@
         <div class="tool">Guardar</div>
       </div>
     </div>
-    <AppBar edge="bottom" visible="true" style="background:#f1f1f1;color:#333;border-top:1px solid #ccc;">
-      <Button label="Switch color" onclick="document.querySelector('#paint-zone').click()"/>
+
+    <AppBar edge="bottom" visible="true" isSticky="true" isOpen="true"
+            style="background:#f1f1f1;color:#333;border-top:1px solid #ccc;">
+      <Button onclick="document.querySelector('#paint-zone').click()">
+        <Icon Source="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"/>
+        <Label>Switch color</Label>
+      </Button>
+      <Button onclick="alert('Guardado como archivo emocional.')">
+        <Icon Source="https://cdn-icons-png.flaticon.com/512/84/84380.png"/>
+        <Label>Guardar</Label>
+      </Button>
     </AppBar>
   </screen>
 </app>

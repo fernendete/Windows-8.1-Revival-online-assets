@@ -5,24 +5,24 @@
 
     <Script><![CDATA[
       function searchAmazon(query) {
-        const results = document.getElementById("search-results");
-        results.innerHTML = `<p>Results for "${query}"...</p>`;
-        Me.Frame.Navigate("search")
+        const results = document.getElementById("results-container");
+        results.innerHTML = `<p>Resultados para "<strong>${query}</strong>"...</p>`;
+        Me.Frame.Navigate("search");
       }
 
       function addToCart() {
-        notify("amazon", "Product added to the cart!")
+        notify("amazon", "Producto añadido al carrito!");
       }
 
       function checkout() {
-        alert("Thanks for shopping at amazon!");
+        alert("Gracias por comprar en Amazon!");
       }
     ]]></Script>
 
     <Stylesheet><![CDATA[
       .screen {
         background-color: #232f3e;
-        color: #000
+        color: #fff;
       }
 
       .serious-header {
@@ -73,6 +73,16 @@
         font-size: 16px;
       }
 
+      .loader {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #ff9900;
+        border-top: 4px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+      }
+
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
@@ -82,7 +92,8 @@
 
   <overlay>
     <div id="search">
-      <input type="text" id="search-input" placeholder="Buscar en Amazon" onkeypress="if(event.key==='Enter') searchAmazon(this.value)">
+      <input type="text" id="search-input" placeholder="Buscar en Amazon"
+             onkeypress="if(event.key==='Enter') searchAmazon(this.value)">
       <div id="search-results"></div>
     </div>
     <div class="loader" id="loading"></div>
@@ -99,11 +110,23 @@
         <div class="category-bt" onclick="searchAmazon('Toys')">Toys &amp; Games</div>
       </div>
     </div>
+
+    <AppBar edge="bottom" visible="true" isSticky="true" transition="slide"
+            style="background:#37475a;color:#fff;border-top:1px solid #ff9900;">
+      <Button onclick="Me.Frame.Navigate('cart')">
+        <Icon Source="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"/>
+        <Label>🛒 Ver carrito</Label>
+      </Button>
+      <Button onclick="searchAmazon('Ofertas')">
+        <Icon Source="https://cdn-icons-png.flaticon.com/512/709/709496.png"/>
+        <Label>🔥 Ofertas</Label>
+      </Button>
+    </AppBar>
   </screen>
 
   <screen name="search">
     <div class="serious-header" id="results-header">Resultados de búsqueda</div>
-    <div id="results-container"></div>
+    <div id="results-container" style="padding:16px;"></div>
   </screen>
 
   <screen name="product">
@@ -116,8 +139,8 @@
   </screen>
 
   <screen name="cart">
-    <div class="serious-header">Your cart</div>
-    <div id="cart-items-container"></div>
+    <div class="serious-header">Tu carrito</div>
+    <div id="cart-items-container" style="padding:16px;"></div>
     <button onclick="checkout()">Finalizar compra</button>
   </screen>
 </app>
