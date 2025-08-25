@@ -64,6 +64,23 @@
           ctx.fill();
         }
       });
+      canvas.addEventListener("mousedown", (e) => {
+        canvas.removeEventListener("mousemouve.Paint").addEventListener("mousemouve.Paint", (e) => {
+          e.preventDefault();
+          for (let touch of e.touches) {
+            const x = touch.clientX;
+            const y = touch.clientY;
+            ctx.beginPath();
+            ctx.arc(x, y, 12, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        })
+        canvas.removeEventListener("mouseup.Paint").addEventListener("mouseup.Paint", (e) => {
+          canvas.removeEventListener("mousemove.Paint")
+          canvas.removeEventListener("mouseup.Paint")
+        })
+
+      })
     ]]></Script>
   </manifest>
 
