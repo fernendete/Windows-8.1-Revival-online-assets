@@ -8,7 +8,12 @@
         border: 2px dashed #ccc;
         background: #fff;
       }
-
+      #tools {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%)
+      }
       .tools {
         display: flex;
         justify-content: space-around;
@@ -21,12 +26,17 @@
         border-radius: 6px;
         cursor: pointer;
         font-size: 14px;
+        color: #000;
       }
 
       #oooh {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
-        touch-action: none;
+        touch-action: none; /* para gestos táctiles */
+        z-index: -1; /* opcional, si querés que esté detrás de otros elementos */
       }
     ]]></Stylesheet>
     <Script><![CDATA[
@@ -36,8 +46,8 @@
       let index = 0;
 
       zone.onclick = () => {
-        zone.style.background = colors[index];
         index = (index + 1) % colors.length;
+        ctx.fillStyle = colors[index];
       };
 
       const canvas = document.querySelector("#oooh");
@@ -64,27 +74,13 @@
   </liveTiles>
 
   <screen name="_main_">
-    <canvas id="oooh" width="500" height="500"></canvas>
+    <canvas id="oooh"></canvas>
     <div style="padding-top:150px;">
-      <h1 class="app-header" style="color:#333;font-size:26px;margin-bottom:20px;">LET'S PAINT</h1>
-      <div id="paint-zone" class="paint-zone"></div>
       <div class="tools">
         <div class="tool">Pincel</div>
         <div class="tool">Color</div>
         <div class="tool">Guardar</div>
       </div>
     </div>
-
-    <AppBar edge="bottom" visible="true" isSticky="true" isOpen="true"
-            style="background:#f1f1f1;color:#333;border-top:1px solid #ccc;">
-      <Button onclick="document.querySelector('#paint-zone').click()">
-        <Icon Source="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"/>
-        <Label>Switch color</Label>
-      </Button>
-      <Button onclick="alert('Guardado como archivo emocional.')">
-        <Icon Source="https://cdn-icons-png.flaticon.com/512/84/84380.png"/>
-        <Label>Guardar</Label>
-      </Button>
-    </AppBar>
   </screen>
 </app>
