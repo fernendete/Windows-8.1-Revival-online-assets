@@ -111,16 +111,9 @@
       </div>
     </div>
 
-    <AppBar edge="bottom" visible="true" isSticky="true" transition="slide"
-            style="background:#37475a;color:#fff;border-top:1px solid #ff9900;">
-      <Button onclick="Me.Frame.Navigate('cart')">
-        <Icon Source="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"/>
-        <Label>🛒 Ver carrito</Label>
-      </Button>
-      <Button onclick="searchAmazon('Ofertas')">
-        <Icon Source="https://cdn-icons-png.flaticon.com/512/709/709496.png"/>
-        <Label>🔥 Ofertas</Label>
-      </Button>
+    <AppBar isSticky="true" isOpen="true" Background="#37475a">
+      <AppBarButton onclick="Me.Frame.Navigate('cart')" Icon="shop" Label="View cart"/>
+      <AppBarButton onclick="searchAmazon('Ofertas')" Icon="list" Label="Stock"/>
     </AppBar>
   </screen>
 
