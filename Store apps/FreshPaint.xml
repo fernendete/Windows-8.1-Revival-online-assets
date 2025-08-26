@@ -82,18 +82,11 @@
 
   <liveTiles>
     <state onlyInSize="wide">
-      <div style="padding:10px;font-size:14px;">🎨 Freshpaint listo para crear</div>
+      <div style="padding:10px;font-size:14px;">Freshpaint</div>
     </state>
   </liveTiles>
 
   <screen name="_main_">
     <canvas id="oooh"></canvas>
-    <div style="padding-top:150px;">
-      <div class="tools">
-        <div class="tool">Pincel</div>
-        <div class="tool">Color</div>
-        <div class="tool">Guardar</div>
-      </div>
-    </div>
   </screen>
 </app>
