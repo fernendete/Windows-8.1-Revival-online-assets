@@ -80,12 +80,6 @@
     ]]></Script>
   </manifest>
 
-  <liveTiles>
-    <state onlyInSize="wide">
-      <div style="padding:10px;font-size:14px;">Freshpaint</div>
-    </state>
-  </liveTiles>
-
   <screen name="_main_">
     <canvas id="oooh"></canvas>
   </screen>

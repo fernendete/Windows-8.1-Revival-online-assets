@@ -124,16 +124,16 @@
 
   <screen name="product">
     <div id="scroll">
-      <h1 id="product-name">Producto</h1>
-      <p id="product-desc">Descripción</p>
+      <h1 id="product-name">Product</h1>
+      <p id="product-desc">Description</p>
       <p id="product-price">$??</p>
-      <button onclick="addToCart()">🛒 Añadir al carrito</button>
+      <button onclick="addToCart()">Add to cart</button>
     </div>
   </screen>
 
   <screen name="cart">
-    <div class="serious-header">Tu carrito</div>
+    <div class="serious-header">Your cart</div>
     <div id="cart-items-container" style="padding:16px;"></div>
-    <button onclick="checkout()">Finalizar compra</button>
+    <button onclick="checkout()">Pay now</button>
   </screen>
 </app>
