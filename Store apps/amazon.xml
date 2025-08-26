@@ -99,7 +99,7 @@
     <div class="loader" id="loading"></div>
   </overlay>
 
-  <screen name="_main_">
+  <screen name="_main_" appBar="context">
     <div class="app-header">Amazon Portal</div>
     <div id="scroll">
       <div id="featured-products"></div>
@@ -111,10 +111,10 @@
       </div>
     </div>
 
-    <AppBar isSticky="true" isOpen="true" Background="#37475a">
+    <BottomAppBar name="context" Background="#37475a">
       <AppBarButton onclick="Me.Frame.Navigate('cart')" Icon="shop" Label="View cart"/>
       <AppBarButton onclick="searchAmazon('Ofertas')" Icon="list" Label="Stock"/>
-    </AppBar>
+    </BottomAppBar>
   </screen>
 
   <screen name="search">
