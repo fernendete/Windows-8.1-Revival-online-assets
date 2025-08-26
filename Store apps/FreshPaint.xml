@@ -59,6 +59,8 @@
         }
       });
       canvas.addEventListener("mousedown", (e) => {
+        function HandleMove(e) {
+        } 
         canvas.removeEventListener("mousemouve.Paint").addEventListener("mousemouve.Paint", (e) => {
           e.preventDefault();
           for (let touch of e.touches) {
