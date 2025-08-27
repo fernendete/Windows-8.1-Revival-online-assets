@@ -33,8 +33,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100vw!important;
+        height: 100vh!important;
         touch-action: none; /* para gestos táctiles */
         z-index: -1; /* opcional, si querés que esté detrás de otros elementos */
       }
@@ -58,29 +58,10 @@
           ctx.fill();
         }
       });
-      canvas.addEventListener("mousedown", (e) => {
-        function HandleMove(e) {
-        } 
-        canvas.removeEventListener("mousemouve.Paint").addEventListener("mousemouve.Paint", (e) => {
-          e.preventDefault();
-          for (let touch of e.touches) {
-            const x = touch.clientX;
-            const y = touch.clientY;
-            ctx.beginPath();
-            ctx.arc(x, y, 12, 0, Math.PI * 2);
-            ctx.fill();
-          }
-        })
-        canvas.removeEventListener("mouseup.Paint").addEventListener("mouseup.Paint", (e) => {
-          canvas.removeEventListener("mousemove.Paint")
-          canvas.removeEventListener("mouseup.Paint")
-        })
-
-      })
     ]]></Script>
   </manifest>
 
   <screen name="_main_">
-    <canvas id="oooh"></canvas>
+    <canvas id="oooh" style="width: 100vw!important; height: 100vh!important"></canvas>
   </screen>
 </app>
