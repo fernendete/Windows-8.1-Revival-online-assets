@@ -1,5 +1,9 @@
 <app name='El-pais' color='#fafafa'>
     <screen name='_main_'>
         <h1 class='app-header'>EL PAIS NIUS</h1>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2024/08/15/17237539561838.jpg" appBar="context">
+        <BottomAppBar name="context">
+            <AppBarButton Label="view details" Icon="list"/>
+        </BottomAppBar>
     </screen>
 </app>

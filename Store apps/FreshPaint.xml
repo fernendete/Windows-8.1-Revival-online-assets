@@ -47,7 +47,6 @@
       const canvas = document.querySelector("#oooh");
       const ctx = canvas.getContext("2d");
       ctx.fillStyle = "black";
-
       canvas.addEventListener("touchmove", (e) => {
         e.preventDefault();
         for (let touch of e.touches) {

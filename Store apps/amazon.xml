@@ -100,7 +100,7 @@
   </overlay>
 
   <screen name="_main_" appBar="context">
-    <div class="app-header">Amazon Portal</div>
+    <div class="app-header">Homepage</div>
     <div id="scroll">
       <div id="featured-products"></div>
       <div id="categories">
