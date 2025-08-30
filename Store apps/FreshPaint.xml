@@ -2,12 +2,6 @@
   <manifest>
     <Icon Source="https://www.chip.de/ii/1/8/7/2/6/5/2/5/fresh_paint_icon-45c09013746272ba.png"/>
     <Stylesheet><![CDATA[
-      .paint-zone {
-        width: 100%;
-        height: 400px;
-        border: 2px dashed #ccc;
-        background: #fff;
-      }
       #tools {
         position: absolute;
         left: 50%;

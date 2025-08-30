@@ -118,7 +118,7 @@
   </screen>
 
   <screen name="search">
-    <div class="serious-header" id="results-header">Resultados de búsqueda</div>
+    <div class="serious-header" id="results-header">Search Results</div>
     <div id="results-container" style="padding:16px;"></div>
   </screen>
 
