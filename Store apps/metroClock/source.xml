@@ -1,0 +1,66 @@
+<app name="metroclock" color="#0078d7">
+  <manifest>
+    <Icon Source="https://i.imgur.com/vlq0hsp.png"/>
+    <Stylesheet inline="true"><![CDATA[
+      .clock {
+        font-size: 48px;
+        color: #fff;
+        text-align: center;
+        padding: 40px;
+        background: #222;
+      }
+
+      .theme-toggle {
+        font-size: 16px;
+        padding: 12px;
+        background: #0078d7;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+        text-align: center;
+      }
+    ]]></Stylesheet>
+    <Script inline="true"><![CDATA[
+      const app = document.querySelector('#apps-box #metroclock');
+      const clock = app.querySelector('#clock');
+      const toggle = app.querySelector('#theme-toggle');
+
+      function updateTime() {
+        const now = new Date();
+        clock.textContent = now.toLocaleTimeString();
+      }
+
+      setInterval(updateTime, 1000);
+      updateTime();
+
+      toggle.onclick = () => {
+        const dark = app.hasAttribute('data-dark');
+        if (dark) {
+          app.removeAttribute('data-dark');
+          clock.style.background = '#222';
+        } else {
+          app.setAttribute('data-dark', 'true');
+          clock.style.background = '#000';
+        }
+      };
+    ]]></Script>
+  </manifest>
+
+  <liveTiles>
+    <state onlyInSize="wide" appIcon="true">
+      <div style="color:#fff;padding:10px;">🕒 MetroClock activo — Tiempo local</div>
+    </state>
+  </liveTiles>
+
+  <screen name="_main_">
+    <div class="app-header" style="background:#0078d7;color:#fff;padding:12px;font-size:22px;">MetroClock</div>
+    <div style="padding:20px;">
+      <div id="clock" class="clock">--:--:--</div>
+      <div id="theme-toggle" class="theme-toggle">Cambiar tema</div>
+    </div>
+    <AppBar edge="bottom" visible="true" style="background:#000;color:#fff;border-top:1px solid #333;">
+      <Button label="⟳ Refrescar" style="padding:10px;background:#111;color:#fff;font-size:14px;"
+              onclick="location.reload()"/>
+    </AppBar>
+  </screen>
+</app>

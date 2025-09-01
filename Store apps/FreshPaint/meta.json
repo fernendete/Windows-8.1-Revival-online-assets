@@ -1,0 +1,33 @@
+{
+  "c": "Klyde frego",
+  "price": "Free",
+  "ct": "Entertainment",
+  "pr": ["LOCAL_NETWORK"],
+  "src": {
+    "banner": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2013/07/Fresh-Paint-8.1.jpg?itok=qMJS4tjl",
+    "icon": "https://www.chip.de/ii/1/8/7/2/6/5/2/5/fresh_paint_icon-45c09013746272ba.png"
+  },
+  "s": [
+    {
+      "url": "https://blogs.windows.com/wp-content/uploads/sites/2/2013/07/FreshPaint_5F00_PaletteBlue_5F00_Citrus_5F00_4FC6BE06.png"
+    },
+    {
+      "url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/14485764/freshpaintwp82.1419979985.png?quality=90&strip=all&crop=0,6.3965053549547,100,87.206989290091"
+    },
+    {
+      "url": "https://i.ytimg.com/vi/3ctfzImB82c/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWyhIMA8=&rs=AOn4CLCWv4DmUSRsJArGa_72OAxXPQRmxg"
+    },
+    {
+      "url": "https://cdn.mos.cms.futurecdn.net/TAfst7q7zco4NgRca8bmbY.jpg"
+    }
+  ],
+  "xml": "FreshPaint.xml",
+  "r": [
+    {
+      "s": 3,
+      "t": "oh gosh not so good",
+      "d": "1-25-7-2025",
+      "c": "I mean it's ok I liek it but its buuuggyyy asf"
+    }
+  ]
+}

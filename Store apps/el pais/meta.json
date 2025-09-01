@@ -1,0 +1,11 @@
+{
+  "c": "unkown",
+  "pr": ["LOCAL_NETWORK", "INTERNET_CONNECTION"],
+  "ct": "News & weather",
+  "src": {
+    "banner": "https://th.bing.com/th/id/R.e2f905083abaac622db69e0461477f9b?rik=FiGIhYTW35u7EA&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f5aec36926554160a79be9fcd.png&ehk=rsrShaBca5DRc5wwrnpWdRelP%2bW2AT9Sk7HaAVMvyK0%3d&risl=&pid=ImgRaw&r=0",
+    "icon": "https://play-lh.googleusercontent.com/NYeRvpSxP2NLcfjwikdU6IxOC-FnPdgRbYcgEEiTFxrZcbXAKaBahhwmD-BIGDAxm9s"
+  },
+  "xml": "el-pais.xml",
+  "r": []
+}
