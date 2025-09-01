@@ -3,6 +3,7 @@
   "price": "Free",
   "ct": "Entertainment",
   "pr": ["LOCAL_NETWORK"],
+  "cl": "#fff",
   "src": {
     "banner": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2013/07/Fresh-Paint-8.1.jpg?itok=qMJS4tjl",
     "icon": "https://www.chip.de/ii/1/8/7/2/6/5/2/5/fresh_paint_icon-45c09013746272ba.png"

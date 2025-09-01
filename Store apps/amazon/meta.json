@@ -4,6 +4,7 @@
     "banner": "https://i0.wp.com/richardparkin.co.uk/wp-content/uploads/2020/04/amazon-logo-transparent.png?fit=1024%2C308&ssl=1",
     "icon": "https://th.bing.com/th/id/OIP.6BOvnuJ5HvweVJzuIi-H7AHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
   },
+  "cl": "#fff",
   "ct": "Shopping",
   "pr": ["LOCAL_NETWORK", "INTERNET_CONNECTION"],
   "s": [
