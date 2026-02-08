@@ -1,9 +1,50 @@
-
 [
     {
         "name": "Google's look, evolved",
         "color": "white",
         "description": "google's logo",
         "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google-logos-animated.gif"
+    },
+    {
+        "name": "Google 2015 Logo",
+        "color": "multicolor",
+        "description": "the modern flat google logo introduced in 2015",
+        "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+        "name": "Old Google Logo (1998)",
+        "color": "multicolor",
+        "description": "the original retro google logo from 1998",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_1998_logo.png"
+    },
+    {
+        "name": "Google Doodle Artwork",
+        "color": "various",
+        "description": "a sample google doodle used for special events",
+        "url": "https://www.google.com/logos/doodles/2023/sample.png"
+    },
+    {
+        "name": "Google Chrome Logo",
+        "color": "multicolor",
+        "description": "the chrome browser logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%28February_2022%29.svg"
+    },
+    {
+        "name": "Google Maps Pin",
+        "color": "red",
+        "description": "the classic google maps location pin",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Google_Maps_pin.svg"
+    },
+    {
+        "name": "Google Drive Logo",
+        "color": "yellow-green-blue",
+        "description": "the triangular google drive logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png"
+    },
+    {
+        "name": "Google Photos Logo",
+        "color": "multicolor",
+        "description": "the pinwheel-shaped google photos logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Google_Photos_icon.svg"
     }
 ]
