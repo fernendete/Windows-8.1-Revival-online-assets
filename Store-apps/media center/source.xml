@@ -1,18 +1,16 @@
 <app name="media_center" color="#00a000">
 
   <manifest>
-    <Icon Source="icon.png"/>
+    <Icon Source="icon.png" onl="true"/>
     <Publisher>Microsoft Cooperation Inc.</Publisher>
     <Script Source="script.js" onl="true"></Script>
     <Stylesheet Source="styles.css" onl="true"></Stylesheet>
   </manifest>
 
   <screen name="_main_">
-
-    <!-- TODO EL BODY ORIGINAL -->
     <div class="shell">
       <div class="title-bar">
-        <span>Windows Media Center</span> – Home
+        <span>Windows Media Center</span> - Home
       </div>
 
       <div class="main">
@@ -37,7 +35,7 @@
 
         <section class="content">
           <div>
-            <div class="section-title">TV – Guide</div>
+            <div class="section-title">TV - Guide</div>
             <div class="tiles-row">
               <div class="tile">
                 <div class="tile-title">Live TV</div>
