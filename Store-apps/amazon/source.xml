@@ -1,13 +1,19 @@
 <app name="amazon" color="#232f3e">
+
   <manifest>
     <Icon Source="https://i.redd.it/d4n0a94pr5xd1.jpeg"/>
     <Publisher>Amazon Inc.</Publisher>
 
     <Script><![CDATA[
       function searchAmazon(query) {
-        const results = document.getElementById("results-container");
-        results.innerHTML = `<p>Resultados para "<strong>${query}</strong>"...</p>`;
         Me.Frame.Navigate("search");
+
+        setTimeout(() => {
+          const results = document.getElementById("results-container");
+          results.innerHTML = `
+            <p>Resultados para "<strong>${query}</strong>"...</p>
+          `;
+        }, 50);
       }
 
       function addToCart() {
@@ -23,6 +29,7 @@
       .screen {
         background-color: #232f3e;
         color: #fff;
+        font-family: "Roboto Flex", sans-serif;
       }
 
       .serious-header {
@@ -33,8 +40,9 @@
         text-align: center;
       }
 
-      #scroll {
+      .scroll-area {
         padding: 16px;
+        overflow-y: auto;
       }
 
       .category-bt {
@@ -81,6 +89,7 @@
         border-radius: 50%;
         animation: spin 1s linear infinite;
         margin: 20px auto;
+        display: none;
       }
 
       @keyframes spin {
@@ -90,8 +99,9 @@
     ]]></Stylesheet>
   </manifest>
 
+  <!-- OVERLAY (Search UI global) -->
   <overlay>
-    <div id="search">
+    <div id="search-overlay">
       <input type="text" id="search-input" placeholder="Buscar en Amazon"
              onkeypress="if(event.key==='Enter') searchAmazon(this.value)">
       <div id="search-results"></div>
@@ -99,10 +109,13 @@
     <div class="loader" id="loading"></div>
   </overlay>
 
+  <!-- MAIN SCREEN -->
   <screen name="_main_" appBar="context">
     <div class="app-header">Homepage</div>
-    <div id="scroll">
+
+    <div class="scroll-area">
       <div id="featured-products"></div>
+
       <div id="categories">
         <div class="category-bt" onclick="searchAmazon('Electronics')">Electronics</div>
         <div class="category-bt" onclick="searchAmazon('Books')">Books</div>
@@ -117,13 +130,15 @@
     </BottomAppBar>
   </screen>
 
+  <!-- SEARCH SCREEN -->
   <screen name="search">
     <div class="serious-header" id="results-header">Search Results</div>
-    <div id="results-container" style="padding:16px;"></div>
+    <div id="results-container" class="scroll-area"></div>
   </screen>
 
+  <!-- PRODUCT SCREEN -->
   <screen name="product">
-    <div id="scroll">
+    <div class="scroll-area">
       <h1 id="product-name">Product</h1>
       <p id="product-desc">Description</p>
       <p id="product-price">$??</p>
@@ -131,9 +146,11 @@
     </div>
   </screen>
 
+  <!-- CART SCREEN -->
   <screen name="cart">
     <div class="serious-header">Your cart</div>
-    <div id="cart-items-container" style="padding:16px;"></div>
+    <div id="cart-items-container" class="scroll-area"></div>
     <button onclick="checkout()">Pay now</button>
   </screen>
+
 </app>
