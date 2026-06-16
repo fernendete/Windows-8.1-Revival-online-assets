@@ -1,0 +1,111 @@
+<app name="media_center" color="#00a000">
+
+  <manifest>
+    <Icon Source="icon.png"/>
+    <Publisher>Microsoft Cooperation Inc.</Publisher>
+    <Script>script.js</Script>
+    <Script>script.js</Script>
+    <Stylesheet>styles.css</Stylesheet>
+  </manifest>
+
+  <screen name="_main_">
+
+    <!-- TODO EL BODY ORIGINAL -->
+    <div class="shell">
+      <div class="title-bar">
+        <span>Windows Media Center</span> – Home
+      </div>
+
+      <div class="main">
+        <nav class="nav">
+          <h2>Library</h2>
+          <ul>
+            <li class="active">TV</li>
+            <li>Movies</li>
+            <li>Music</li>
+            <li>Pictures</li>
+            <li>Recorded TV</li>
+          </ul>
+
+          <h2 style="margin-top:24px;">Tasks</h2>
+          <ul>
+            <li>Settings</li>
+            <div id="userButton" class="user-button" style="cursor:pointer;">Account</div>
+            <li>Extenders</li>
+            <li>Exit</li>
+          </ul>
+        </nav>
+
+        <section class="content">
+          <div>
+            <div class="section-title">TV – Guide</div>
+            <div class="tiles-row">
+              <div class="tile">
+                <div class="tile-title">Live TV</div>
+                <div class="tile-sub">Watch current channels</div>
+              </div>
+              <div class="tile">
+                <div class="tile-title">Guide</div>
+                <div class="tile-sub">Browse upcoming shows</div>
+              </div>
+              <div class="tile">
+                <div class="tile-title">Recorded TV</div>
+                <div class="tile-sub">View saved programs</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-title">Recently added</div>
+            <div class="tiles-row">
+              <div class="tile">
+                <div class="tile-title">Movie: The Matrix</div>
+                <div class="tile-sub">HD · 2h 16m</div>
+              </div>
+              <div class="tile">
+                <div class="tile-title">Album: Random Access Memories</div>
+                <div class="tile-sub">Daft Punk</div>
+              </div>
+              <div class="tile">
+                <div class="tile-title">Photos: Summer Trip</div>
+                <div class="tile-sub">45 items</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <span><span class="status-dot"></span>Media Center ready</span>
+            <span>Press Alt+Enter for full screen</span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- PANEL DE CUENTA -->
+    <div class="account-panel" id="accountPanel">
+      <div class="panel-header">
+        <h2>Account</h2>
+        <button id="closePanel">✕</button>
+      </div>
+
+      <div class="panel-user">
+        <img src="user.jpg" class="user-avatar">
+        <div>
+          <div class="user-name">Fernando</div>
+          <div class="user-role">Local Account</div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <h3>Settings</h3>
+        <ul>
+          <li>Change picture</li>
+          <li>Manage account</li>
+          <li>Sign out</li>
+        </ul>
+      </div>
+    </div>
+
+  </screen>
+
+</app>

@@ -1,0 +1,232 @@
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #1b3b5a 0, #02060a 60%);
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .shell {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 24px 40px;
+    }
+
+    .title-bar {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+
+    .title-bar span {
+      font-weight: 600;
+    }
+
+    .main {
+      display: flex;
+      gap: 32px;
+      flex: 1;
+    }
+
+    .nav {
+      width: 260px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+      padding-right: 24px;
+    }
+
+    .nav h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9fd3ff;
+    }
+
+    .nav ul {
+      list-style: none;
+    }
+
+    .nav li {
+      padding: 8px 0;
+      font-size: 16px;
+      cursor: pointer;
+      color: #dbe9ff;
+    }
+
+    .nav li:hover {
+      color: #ffffff;
+    }
+
+    .nav li.active {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .tiles-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tile {
+      background: rgba(0,0,0,0.35);
+      border-radius: 6px;
+      padding: 12px 16px;
+      min-width: 180px;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out;
+    }
+
+    .tile:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.5);
+    }
+
+    .tile-title {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .tile-sub {
+      font-size: 13px;
+      color: #c7d8ff;
+    }
+
+    .footer {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #9fb4d9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0.85;
+    }
+
+    .footer span {
+      opacity: 0.9;
+    }
+
+    .footer .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4cd964;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .account-panel {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 340px;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(18px);
+  box-shadow: -4px 0 18px rgba(0,0,0,0.6);
+  padding: 24px;
+  transition: right 0.35s cubic-bezier(.25,.8,.25,1);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  z-index: 999;
+}
+
+.account-panel.open {
+  right: 0;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.panel-header h2 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.panel-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.panel-header button:hover {
+  opacity: 1;
+}
+
+.panel-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.user-role {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.panel-section h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #9fd3ff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.panel-section ul {
+  list-style: none;
+}
+
+.panel-section li {
+  padding: 10px 0;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.panel-section li:hover {
+  opacity: 1;
+}

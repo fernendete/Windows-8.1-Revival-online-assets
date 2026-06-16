@@ -1,0 +1,33 @@
+{
+  "n": "Windows Media Center",
+  "c": "Microsoft Coopeation Inc.",
+  "src": {
+    "banner": "https://i.ytimg.com/vi/oLihikm77KY/maxresdefault.jpg",
+    "icon": "ICON.PNG"
+  },
+  "cl": "#fff",
+  "ct": "Music & Vdeo",
+  "pr": ["LOCAL_NETWORK", "INTERNET_CONNECTION"],
+  "s": [
+    {
+      "url": "https://i.ytimg.com/vi/oLihikm77KY/maxresdefault.jpg",
+      "note": "hi :)"
+    },
+    {
+      "url": "https://cdn.fastpictureviewer.com/public/web/img/Windows7MediaCenter.jpg",
+      "note": "scrinchot 2"
+    }
+  ],
+  "description": "See everything you love ith Microsoft Media Center",
+  "xml": "media_center.xml",
+  "r": [
+    {
+      "s": 5,
+      "t": "gooood",
+      "d": "6-9-7-2025",
+      "c": "wait it is actually good"
+    },
+    { "s": 5, "t": "ENsERio!?", "d": "0-17-7-2025", "c": "Como apple TV" },
+    { "s": 5, "t": "Hermoso", "d": "2-19-7-2025", "c": "Lo amoo" }
+  ]
+}
