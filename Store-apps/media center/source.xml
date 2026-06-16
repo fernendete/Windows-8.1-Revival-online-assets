@@ -3,9 +3,8 @@
   <manifest>
     <Icon Source="icon.png"/>
     <Publisher>Microsoft Cooperation Inc.</Publisher>
-    <Script>script.js</Script>
-    <Script>script.js</Script>
-    <Stylesheet>styles.css</Stylesheet>
+    <Script Source="script.js" onl="true"></Script>
+    <Stylesheet Source="styles.css" onl="true"></Stylesheet>
   </manifest>
 
   <screen name="_main_">
