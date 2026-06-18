@@ -1,4 +1,4 @@
-<app name="Cut-the-rope" color="#fff">
+<app name="Slither.io" color="#909ae3">
     <manifest>
         <Icon Source="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/fe/96/f9fe967b-1253-0c0a-dea8-fd9fc636b212/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/200x200ia-75.webp"/>
         <Splash Source="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/fe/96/f9fe967b-1253-0c0a-dea8-fd9fc636b212/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/200x200ia-75.webp"/>
