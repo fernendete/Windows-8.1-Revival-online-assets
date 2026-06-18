@@ -1,0 +1,9 @@
+<app name="Google Vids" color="#909ae3">
+    <manifest>
+        <Icon Source="https://www.gstatic.com/images/branding/productlogos/vids_2026/v2/web-48dp/logo_vids_2026_color_1x_web_48dp.png"/>
+        <Splash Source="https://www.gstatic.com/images/branding/productlogos/vids_2026/v2/web-48dp/logo_vids_2026_color_1x_web_48dp.png"/>
+    </manifest>
+    <screen name="_main_">
+        <div id="block-top" style="position:absolute;left:0;top:0;width:100%;height:40px;backgroun:#000;opacity:0"></div>
+        <iframe style="width:100%;height:100%" src="http://slither.com/io"></iframe>
+</app>
