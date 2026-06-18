@@ -1,4 +1,4 @@
-<app name="media_center" color="#00a000">
+<app name="Media center" color="#00a000">
 
   <manifest>
     <Icon Source="icon.png" onl="true"/>
@@ -77,8 +77,6 @@
         </section>
       </div>
     </div>
-
-    <!-- PANEL DE CUENTA -->
     <div class="account-panel" id="accountPanel">
       <div class="panel-header">
         <h2>Account</h2>
