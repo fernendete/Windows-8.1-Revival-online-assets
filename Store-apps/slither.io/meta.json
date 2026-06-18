@@ -1,16 +1,1 @@
-{
-  "c": "Lowtech Studios LLC",
-  "pr": ["LOCAL_NETWORK", "INTERNET_CONNECTION"],
-  "ct": "Games",
-  "cl": "#fff",
-  "src": {
-    "banner": "https://wallpaperaccess.com/full/5720703.jpg",
-    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/fe/96/f9fe967b-1253-0c0a-dea8-fd9fc636b212/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/200x200ia-75.webp"
-  },
-  "r": [{
-      "s": 5,
-      "t": "gooood",
-      "d": "6-9-7-2025",
-      "c": "wait it is actually good"
-    }]
-}
+{"c":"Lowtech Studios LLC","pr":["LOCAL_NETWORK","INTERNET_CONNECTION"],"ct":"Games","cl":"#fff","src":{"banner":"https://wallpaperaccess.com/full/5720703.jpg","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/fe/96/f9fe967b-1253-0c0a-dea8-fd9fc636b212/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/200x200ia-75.webp"},"r":[{"s":5,"t":"gooood","d":"6-9-7-2025","c":"wait it is actually good"},{"s":5,"t":"Ilike it","d":"4-18-5-2026","c":"Pretty good game btw"}]}
