@@ -1,0 +1,9 @@
+<app name="Slither.io" color="#909ae3">
+    <manifest>
+        <Icon Source="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/fe/96/f9fe967b-1253-0c0a-dea8-fd9fc636b212/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/200x200ia-75.webp"/>
+        <Splash Source="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/fe/96/f9fe967b-1253-0c0a-dea8-fd9fc636b212/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/200x200ia-75.webp"/>
+    </manifest>
+    <screen name="_main_">
+        <div id="block-top" style="position:absolute;left:0;top:0;width:100%;height:40px;backgroun:#000;opacity:0"></div>
+        <iframe style="width:100%;height:100%" src="http://slither.com/io"></iframe>
+</app>
