@@ -1,6 +1,5 @@
 [
-    {
-        "ref": ["cat", "cute", "kitty"],
-        "folder": "cats"
-    }
+    {"ref": ["cat","cute","kitty"],"folder": "cats"},
+    {"ref": ["youtube logo","youtube","youtube photo","yt"],"folder": "yt-logo"},
+    {"ref": ["sunset","sunset road","driving into sunset"],"folder": "sunset"}
 ]
